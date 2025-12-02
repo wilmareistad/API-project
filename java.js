@@ -8,7 +8,7 @@ const musicResult = document.querySelector('#result');
 
 searchButton.addEventListener('click', () => {
     const genre = genreSelect.value
-    const url = `https://itunes.apple.com/search?term=${genre}&media=music&limit=10`;
+    const url = `https://itunes.apple.com/search?term=${genre}&media=music&limit=50`;
     
     fetch(url)
     .then(response => response.json())
@@ -16,10 +16,11 @@ searchButton.addEventListener('click', () => {
         musicResult.innerHTML = "";
         console.log(data)
 
-        data.results.forEach(song => {
-            const showResult = document.createElement('div');
-            showResult.innerHTML =
-            `
+        const randomSong = Math.floor(Math.random() * data.results.length);
+        const song = data.results[randomSong];
+
+        const showResult = document.createElement('div');
+        showResult.innerHTML =`
             <h3>${song.artistName}</h3>
             <p>${song.trackName}</p>
             <audio controls src="${song.previewUrl}"></audio>`;
@@ -28,4 +29,3 @@ searchButton.addEventListener('click', () => {
     })
 
     .catch(error => console.error('Fel:', error));
-})
