@@ -19,7 +19,10 @@ searchButton.addEventListener('click', () => {
         data.results.forEach(song => {
             const showResult = document.createElement('div');
             showResult.innerHTML =
-            `<p>${song.artistName}</p>`;
+            `
+            <h3>${song.artistName}</h3>
+            <p>${song.trackName}</p>
+            <audio controls src="${song.previewUrl}"></audio>`;
             musicResult.appendChild(showResult)
         });
     })
