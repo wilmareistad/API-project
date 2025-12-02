@@ -21,6 +21,7 @@ searchButton.addEventListener('click', () => {
 
         const showResult = document.createElement('div');
         showResult.innerHTML =`
+            <img src="${song.artworkUrl100}" alt="Album cover">
             <h3>${song.artistName}</h3>
             <p>${song.trackName}</p>
             <audio controls src="${song.previewUrl}"></audio>
