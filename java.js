@@ -23,9 +23,10 @@ searchButton.addEventListener('click', () => {
         showResult.innerHTML =`
             <h3>${song.artistName}</h3>
             <p>${song.trackName}</p>
-            <audio controls src="${song.previewUrl}"></audio>`;
-            musicResult.appendChild(showResult)
-        });
-    })
+            <audio controls src="${song.previewUrl}"></audio>
+            <a href="${song.trackViewUrl}" target="_blank">Lägg till låten i ditt Itunes Album här!</a>`;
 
-    .catch(error => console.error('Fel:', error));
+            musicResult.appendChild(showResult);
+        })
+        .catch(error => console.error('Fel:', error));
+    });
