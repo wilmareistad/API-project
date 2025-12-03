@@ -34,6 +34,11 @@ section {
 select {
     -webkit-appearance: none;
     appearance: none;
+
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%234ade80" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+
 }
 
 h1 {
@@ -86,6 +91,10 @@ a {
 }
 
 .songSelector {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    justify-content: center;
     margin: 1rem;
 }
 

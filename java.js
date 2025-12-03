@@ -8,7 +8,9 @@ const musicResult = document.querySelector('#result');
 
 searchButton.addEventListener('click', () => {
     const genre = genreSelect.value
-    const url = `https://itunes.apple.com/search?term=${genre}&media=music&limit=50`;
+    // const url = `https://itunes.apple.com/search?term=${genre}&media=music&limit=50`;
+    const url = `https://itunes.apple.com/search?term=${genre}&entity=song&limit=50`;
+
     
     fetch(url)
     .then(response => response.json())
