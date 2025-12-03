@@ -1,17 +1,57 @@
-* {
-    box-sizing: border-box;
+:root {
+    --background-color: #111;
+    --text-color: #fff;
+    --red-text-color: #FF0436;
+    --green-text-color: #4ade80;
 }
 
-:root {
-  --primary-color: green;
+.selectionContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    align-items: center;
+    padding: 2rem;
+    height: 100vh;
 }
 
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--green-text-color);
+}
+
+select, button {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: var(--green-text-color);
+    cursor: pointer;
+    transition: .2s;
+}
+
+
 img {
-    width: 50vw;
+    width: 80%;
     margin: 2%;
 }
 
@@ -28,8 +68,37 @@ img {
     gap: 1rem;
 }
 
-@media (min-width: 600px) {
+#result div {
+    background: #222;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 2rem;
+    /* width: 100%; */
+}
+
+.songSelector {
+    margin: 1rem;
+}
+
+@media (min-width: 800px) {
     img {
-        width: 20vw;
+        max-width: 40vw;
     }
+
+    button:hover {
+        background: #227340;
+    }
+
+    section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        padding: 4rem;
+    }
+
+    h1{
+        font-size: 4rem
+    }
+
 }

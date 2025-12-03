@@ -21,13 +21,15 @@ searchButton.addEventListener('click', () => {
 
         const showResult = document.createElement('div');
         showResult.innerHTML =`
-            <img src="${song.artworkUrl100}" alt="Album cover">
-            <h3>${song.artistName}</h3>
-            <p>${song.trackName}</p>
-            <audio controls src="${song.previewUrl}"></audio>
-            <a href="${song.trackViewUrl}" target="_blank">Lägg till låten i ditt Itunes Album här!</a>`;
+        <img src="${song.artworkUrl100.replace('100x100', '600x600')}" alt="Album cover">
+        
+        <h3>${song.artistName}</h3>
+        <p>${song.trackName}</p>
+        <audio controls src="${song.previewUrl}"></audio>
+        <a href="${song.trackViewUrl}" target="_blank">Lägg till låten i ditt Itunes Album här!</a>`;
+        
+        musicResult.appendChild(showResult);
+    })
+    .catch(error => console.error('Fel:', error));
+});
 
-            musicResult.appendChild(showResult);
-        })
-        .catch(error => console.error('Fel:', error));
-    });

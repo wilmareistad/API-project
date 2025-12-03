@@ -4,23 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <section>
-      <h1>Musik upptäckaren</h1>
-      <h2>Svårt att hitta ny musik?</h2>
-      <h2>Välj en gengre och hitta din nya fovorit låt!</h2>
-
-      <label for="genreSelect">Välj en gengre</label>
-      <select id="genreSelect">
-        <option value="rock">Rock</option>
-        <option value="pop">Pop</option>
-        <option value="hiphop">HipHop</option>
-      </select>
-      <button id="searchButton">Sök</button>
+      <div class="selectionContainer">
+        <h1>Musik upptäckaren</h1>
+        <h2>Svårt att hitta ny musik?</h2>
+        <h2>Välj en gengre och hitta din nya fovorit låt!</h2>
+        <div class="songSelector">
+          <label for="genreSelect">Välj en gengre</label>
+          <select id="genreSelect">
+            <option value="rock">Rock</option>
+            <option value="pop">Pop</option>
+            <option value="hiphop">HipHop</option>
+          </select>
+          <button id="searchButton">Sök</button>
+        </div>
+      </div>
       <div id="result"></div>
-      <script src="java.js"></script>
     </section>
+      <script src="java.js"></script>
   </body>
 </html>
