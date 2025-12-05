@@ -34,7 +34,7 @@ section {
 select {
     -webkit-appearance: none;
     appearance: none;
-
+    /* drop down pil */
     background-image: url('data:image/svg+xml;utf8,<svg fill="%234ade80" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
     background-repeat: no-repeat;
     background-position: right 5px center;
@@ -69,7 +69,11 @@ img {
     display: block;
     margin: 0.5rem auto;
 }
-
+      
+@keyframes zoomIn {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+}
 #result {
     display: flex;
     flex-direction: column;
@@ -78,12 +82,18 @@ img {
     gap: 1rem;
 }
 
+
+
 #result div {
     background: #222;
     border-radius: 20px;
     padding: 1rem;
     margin: 2rem;
-    /* width: 100%; */
+}
+
+.playing {
+    border: 5px solid rgb(255, 106, 131);
+    border-radius: 1rem;
 }
 
 a {
