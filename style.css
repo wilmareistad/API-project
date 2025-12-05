@@ -4,6 +4,9 @@
     --red-text-color: #FF0436;
     --green-text-color: #4ade80;
     --green-hover: #227340;
+    --font: "Outfit", sans-serif;
+    --result-background: #222;
+    --result-border: #ff6a83;
 }
 
 .selectionContainer {
@@ -15,6 +18,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: var(--font);
 }
 
 body {
@@ -39,6 +43,10 @@ select {
     background-repeat: no-repeat;
     background-position: right 5px center;
 
+}
+
+h2, p {
+    font-weight: 300;
 }
 
 h1 {
@@ -85,14 +93,14 @@ img {
 
 
 #result div {
-    background: #222;
+    background: var(--result-background);
     border-radius: 20px;
     padding: 1rem;
     margin: 2rem;
 }
 
 .playing {
-    border: 5px solid rgb(255, 106, 131);
+    border: 5px solid var(--result-border);
     border-radius: 1rem;
 }
 
