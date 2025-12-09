@@ -1,3 +1,4 @@
+/* variables */
 :root {
     --background-color: #111;
     --text-color: #fff;
@@ -26,6 +27,16 @@ body {
     color: var(--text-color);
 }
 
+
+h2, p {
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--green-text-color);
+}
 section {
     display: flex;
     flex-direction: column;
@@ -45,19 +56,9 @@ select {
 
 }
 
-h2, p {
-    font-weight: 300;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: var(--green-text-color);
-}
-
 select, button {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
     border: none;
 }
 
@@ -67,7 +68,6 @@ button {
     transition: 0.2s;
 }
 
-
 img {
     width: 80%;
     margin: 2%;
@@ -75,7 +75,7 @@ img {
 
 #result audio, #result a {
     display: block;
-    margin: 0.5rem auto;
+    margin: .5rem auto;
 }
       
 @keyframes zoomIn {
@@ -89,8 +89,6 @@ img {
     text-align: center;
     gap: 1rem;
 }
-
-
 
 #result div {
     background: var(--result-background);
@@ -117,6 +115,8 @@ a {
     font-size: 1.2rem;
 }
 
+
+/* media query for desktop */
 @media (min-width: 800px) {
     img {
         max-width: 40vw;

@@ -8,7 +8,7 @@ searchButton.addEventListener("click", () => {
 
   fetch(url)
     .then((response) => response.json())
-    .then((data) => {
+    .then((data) =>  {
       musicResult.innerHTML = "";
       console.log(data);
 
@@ -17,17 +17,11 @@ searchButton.addEventListener("click", () => {
 
       const showResult = document.createElement("div");
       showResult.innerHTML = `
-        <img src="${song.artworkUrl100.replace(
-          "100x100",
-          "600x600"
-        )}" alt="Album cover">
-        
+        <img src="${song.artworkUrl100.replace("100x100", "600x600")}" alt="Album cover">
         <h3>${song.artistName}</h3>
         <p>${song.trackName}</p>
         <audio controls src="${song.previewUrl}"></audio>
-        <a href="${
-          song.trackViewUrl
-        }" target="_blank">Lägg till låten i ditt Itunes Album här!</a>`;
+        <a href="${song.trackViewUrl}" target="_blank">Lägg till låten i ditt Itunes Album här!</a>`;
 
       showResult.style.animation = "zoomIn 0.5s ease-in-out";
       musicResult.appendChild(showResult);
